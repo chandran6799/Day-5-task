@@ -41,7 +41,7 @@ let myResume={
  //------------------------------------------------------------------------------------------------------
 
  //2) For the above JSON,iterate over all for loops (for,for in, for of, for each)
- /* 
+ /*
 const myResume=[{
     "personaldetails": {
       "name": "Chandran",
@@ -73,7 +73,7 @@ const myResume=[{
 
       "languages": 
       {
-        "languages_known": "English, Tamil",
+        "languages": "English, Tamil",
       }
     }];
 */
@@ -90,21 +90,19 @@ const myResume=[{
 //For in:
 /*
 for(var key in myResume){
-    console.log(myResume[key]);
+    console.log(myResume[key].personaldetails);
   }
 */
 //For of:
 /*
 let Access = Object.values(myResume);
-for(elements of Access){
-    console.log(elements);
+for(var obj of Access){
+    console.log(obj.education,obj.languages);
 }
 */
 
 //For Each:
 /*
-  let Access = Object.values(myResume);
-  //console.log(Access);
-  
-  Access.forEach((key) => console.log(key));
+  const Access = Object.values(myResume);  
+  Access.forEach((key) => console.log(key.skills));
   */
