@@ -1,62 +1,35 @@
 //1) Create your own resume data in JSON format
-
-/*
-let myResume={
-    "personal details": {
+/*const myResume={
+    
       "name": "Chandran",
       "email": "chandhuu1234@gmail.com",
       "phone": 9080102039,
       "Gender":"Male",
       "degree": "B.sc computer science",
-      "location": {
-        "city": "chennai",
-        "state": "Tamil",
-        "country": "India"
-      },
-    },
-    "education": 
-      {
-        "institution": "Guru Nanak College",
-        "department": "computer science",
-        "studyType": "Full-Time",
-        "batch_start_year": 2016,
-        "batch_end_year": 2020,
-        "cgpa": 8.27
-      },
-
-    "skills": 
-      {
-        "programming_languages": "Html,CSS,Javascript,Reactjs,Nodejs,MongoDB,",        
-        
-      },
-
-      "languages": 
-      {
-        "languages_known": "English, Tamil",
-      }
-    
-  }
+      "institution": "Guru Nanak College",
+      "department": "computer science",
+      "studyType": "Full-Time",
+      "batch_start_year": 2016,
+      "batch_end_year": 2020,
+      "cgpa": 8.27,
+      "programming_languages": "Html,CSS,Javascript,Reactjs,Nodejs,MongoDB,",        
+      "languages_known": "English, Tamil"
+}
   console.log(myResume);
   */
+  
  //------------------------------------------------------------------------------------------------------
 
  //2) For the above JSON,iterate over all for loops (for,for in, for of, for each)
  /*
 const myResume=[{
-    "personaldetails": {
       "name": "Chandran",
       "email": "chandhuu1234@gmail.com",
       "phone": 9080102039,
       "Gender":"Male",
-      "degree": "B.sc computer science",
-      "location": {
-        "city": "chennai",
-        "state": "Tamil",
-        "country": "India"
-      },
-    },
-    "education": 
-      {
+      "degree": "B.sc computer science"
+        },
+        {
         "institution": "Guru Nanak College",
         "department": "computer science",
         "studyType": "Full-Time",
@@ -64,45 +37,55 @@ const myResume=[{
         "batch_end_year": 2020,
         "cgpa": 8.27
       },
-
-    "skills": 
       {
-        "programming_languages": "Html,CSS,Javascript,Reactjs,Nodejs,MongoDB,",        
-        
-      },
-
-      "languages": 
-      {
-        "languages": "English, Tamil",
+        "programming_languages": "Html,CSS,Javascript,Reactjs,Nodejs,MongoD", 
+        "languages_known": "English, Tamil"
       }
-    }];
-*/
+    ];
+   */ 
+
 //For loop:
 /*
-    for(let i = 0 ; i < myResume.length ; i++){
-    var Access = myResume[i];
-  
-    console.log(Access.personaldetails.name);
-   console.log(Access.skills);
+    for(let i=0;i<myResume.length;i++){
+    var data = myResume[i];
+   console.log(data);
   }
 */
 
 //For in:
 /*
 for(var key in myResume){
-    console.log(myResume[key].personaldetails);
+    console.log(myResume[key]);
   }
 */
 //For of:
 /*
-let Access = Object.values(myResume);
-for(var obj of Access){
-    console.log(obj.education,obj.languages);
+const myResume={
+      "name": "Chandran",
+      "email": "chandhuu1234@gmail.com",
+      "phone": 9080102039,
+      "Gender":"Male",
+      "degree": "B.sc computer science",
+      "institution": "Guru Nanak College",
+      "department": "computer science",
+      "studyType": "Full-Time",
+      "batch_start_year": 2016,
+      "batch_end_year": 2020,
+      "cgpa": 8.27,
+      "programming_languages": "Html,CSS,Javascript,Reactjs,Nodejs,MongoDB,",        
+      "languages_known": "English, Tamil"
+    }
+const data = Object.entries(myResume)
+
+//For of:
+
+for (var [key,value] of data){
+  console.log(value);
 }
-*/
+
 
 //For Each:
-/*
-  const Access = Object.values(myResume);  
-  Access.forEach((key) => console.log(key.skills));
+
+  data.forEach(([key,val])=> console.log(key));
   */
+ 
